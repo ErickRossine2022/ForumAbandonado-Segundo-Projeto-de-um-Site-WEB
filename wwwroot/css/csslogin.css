@@ -1,0 +1,68 @@
+.Cabecalho-Login
+{
+    margin: 20px;
+    color: aliceblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.Conteudo-Insirido-Do-Login
+{
+    max-width: 500px;
+    margin: 0 auto; /* centraliza horizontalmente */
+    padding: 20px;
+    background-color: #1f1f1f; /* fundo escuro */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.Conteudo-Insirido-Do-Login input 
+{
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+}
+
+.Conteudo-Insirido-Do-Login input:focus
+{
+    outline: none;
+    border-color: #888;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.Login-Div
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.Login-Div button,
+.Login-Div a.btn {
+    flex: 1;
+    margin: 0 5px;
+    background-color: #3a3a3a;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+
+label
+{
+    color: aliceblue;
+}
+
+.Login-Div
+{
+    margin-top: 20px;
+}

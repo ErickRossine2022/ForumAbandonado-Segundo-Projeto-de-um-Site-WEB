@@ -1,0 +1,82 @@
+@page
+@model RegisterSystemModel
+@{
+    ViewData["Title"] = "Registro Blank1ll Network";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/cssregister.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SiteWeb.styler.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="Cabecalho-Registro">
+        <h1>Enter your information below</h1>
+        <p>With this information you will be able to log in to our website</p>
+    </header>
+
+    <main class="Conteudo-Principal-Registro container">
+        <form method="post" class="Conteudo-Insirido-Do-Usuario">
+
+            <!-- MENSAGENS DE ERRO -->
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <div class="alert alert-danger">@error.ErrorMessage</div>
+            }
+
+            <!-- Campo de Nome de Usuário -->
+            <div class="Conteudo-Campo-Usuario">
+                <label asp-for="nome" class="form-label"></label>
+                <input asp-for="nome" class="form-control" placeholder="Enter your username!" />
+            </div>
+
+            <!-- Campo de E-mail -->
+            <div class="Conteudo-Campo-Email">
+                <label asp-for="email" class="form-label"></label>
+                <input asp-for="email" type="email" class="form-control" placeholder="Enter an existing email!" />
+            </div>
+
+            <!-- Campo de Senha -->
+            <div class="Conteudo-Campo-Senha">
+                <label asp-for="password" class="form-label"></label>
+                <input asp-for="password" type="password" class="form-control" placeholder="Create your password!" />
+            </div>
+
+            <!-- Campo de Repetir Senha -->
+            <div class="Conteudo-Campo-Repetir-Senha">
+                <label asp-for="rptpassword" class="form-label">Repeat your password</label>
+                <input asp-for="rptpassword" type="password" class="form-control" placeholder="Repeat your password!" />
+            </div>
+
+            <!-- Mostrar campo de código apenas após o envio -->
+            @if (Model.CodigoFoiEnviado)
+            {
+                <div class="Conteudo-Campo-Confirmar-Codigo">
+                    <label asp-for="Codigo" class="form-label"></label>
+                    <input asp-for="Codigo" class="form-control" placeholder="Enter confirmation code here!" />
+                </div>
+            }
+
+            <!-- Botões -->
+            <div class="Coteudo-Botoes-De-Acao mt-3">
+                <button type="submit" class="btn btn-primary Botao-Concluir-Registro">
+                    @if (Model.CodigoFoiEnviado)
+                    {
+                        @:Register
+                    }
+                    else
+                    {
+                        @:Send Code
+                    }
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

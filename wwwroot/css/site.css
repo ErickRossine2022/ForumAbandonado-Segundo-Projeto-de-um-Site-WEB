@@ -1,0 +1,93 @@
+
+
+/* Faz o vídeo cobrir toda a tela e ficar fixo no fundo */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Conteudo-Principal
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: White;
+  text-align: center;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Colocar os botoes no Canto superior direito */
+.Botoes-Registro-Login
+{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 2;
+}
+
+/* Estilo dos botões */
+.Botoes-Registro-Login button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Botoes-Registro-Login button:hover {
+    background-color: #666;
+}
+
+.Botoes-De-Navegacao {
+    position:absolute;
+    justify-content: flex-start;
+    top: 20px;
+    left: 30px;
+    z-index: 2;
+}
+
+.Botoes-De-Navegacao a {
+   margin-left: 10px;
+}
+
+.Botoes-De-Navegacao img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.Botoes-De-Navegacao img:hover {
+    transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main h1, main p {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}

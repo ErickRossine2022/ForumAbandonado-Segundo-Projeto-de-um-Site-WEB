@@ -1,0 +1,33 @@
+@page
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/cssboasvindas.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SiteWeb.styler.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="Boas-Vindas">
+        <!-- Botão X com link Razor para outra página -->
+        <a asp-page="/PaginasDoForum/PaginaInicial" class="Botao-Fechar" title="Go to Home">×</a>
+
+        <div class="Conteudo-Titulo-Mais-Paragrafos">
+            <h1>Hello</h1>
+            <p>Welcome to the Blank1ll Network — a website created and developed by a solo developer: √ Blank1ll - [The Dev]</p>
+            <p>Originally, this project started as a personal challenge — a way for me to learn how websites are built from the ground up.</p>
+            <p>But along the way, it grew into something more meaningful. I wanted this to be more than just a project. I wanted it to become a real platform — something people could actually use and enjoy.</p>
+            <p>Here, you can ask questions, share photos, videos, and messages — just like on a social network.</p>
+            <p>In the future, this site will also support online courses shared by the community. It's still under development, but you're welcome to explore and be a part of it.</p>
+            <p>If you're a user, enjoy your time here! If you're a recruiter or company representative, know that I'm still learning — but I work hard, and my dream is to work in tech professionally.</p>
+            <p>Give me a chance, and I promise I'll make it worth your time. Thanks for visiting — and welcome to the Blank1ll Network!</p>
+        </div>
+    </header>
+</body>
+</html>

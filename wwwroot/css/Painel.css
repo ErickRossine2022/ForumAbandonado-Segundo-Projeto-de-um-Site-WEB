@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #0f1117;
+    color: #252525;
+    font-size: 18px;
+    min-height: 100vh;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    transition: 0.3s;
+    color: #b5b5b5 !important;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+.navbar .bi-person-circle {
+    transition: 0.3s;
+}
+
+.navbar .bi-person-circle:hover {
+    color: #0dcaf0;
+}
+
+.dropdown-menu {
+    background-color: #1a1d29;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+}
+
+
+.dropdown-menu .dropdown-item {
+    color: #242424;
+    transition: 0.2s;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: rgb(0, 171, 250);
+    color: #3a3a3a;
+}
+
+/* Foto do usuário */
+.user-photo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;   /* 🔥 deixa circular */
+    object-fit: cover;    /* mantém proporção */
+    border: 2px solid #ecc100; /* opcional: borda azul gamer */
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}

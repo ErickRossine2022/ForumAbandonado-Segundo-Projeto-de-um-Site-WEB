@@ -1,0 +1,48 @@
+@page
+@model PaginaInicial
+@{
+    Layout = "_LayoutPainel";
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/cssPaginaInicial.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SiteWeb.styler.css" asp-append-version="true" />
+</head>
+<body>
+    <main class="container feed-container">
+
+        <!-- Formulário de postagem -->
+        <div class="card shadow p-3 mb-4 bg-dark text-light rounded-3">
+            <form method="post" enctype="multipart/form-data">
+                <textarea name="Texto" class="form-control mb-2" placeholder="What you're thinking?" rows="3"></textarea>
+                
+                <div class="d-flex gap-2">
+                    <label class="btn btn-outline-info btn-sm">
+                        <i class="bi bi-image"></i> Choose photo
+                        <input type="file" name="Imagem" accept="image/*" hidden>
+                    </label>
+
+                    <label class="btn btn-outline-warning btn-sm">
+                        <i class="bi bi-camera-video"></i> Choose video
+                        <input type="file" name="Video" accept="video/*" hidden>
+                    </label>
+                </div>
+
+                <div class="text-end mt-2">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-send-fill"></i> Post
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

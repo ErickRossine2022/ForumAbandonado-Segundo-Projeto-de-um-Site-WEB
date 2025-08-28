@@ -1,0 +1,54 @@
+@page
+@model LoginSystemModel
+@{
+    ViewData["Title"] = "Login Blank1ll Network";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/csslogin.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SiteWeb.styler.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="Cabecalho-Login">
+        <h1>Connecting</h1>
+        <p>I don't know if this is your first visit, but I still appreciate it.</p>
+        <p>Thank you for your visit and for any suggestions to improve the site.</p>
+        <p>Enter your information in the fields below. Make the most of the Blank1ll Network.</p>
+    </header>
+
+    <main class="Conteudo-Principal-Login">
+        <div class="Conteudo-Principal-Campos-Login">
+            <form method="post" class="Conteudo-Insirido-Do-Login">
+
+                <!-- Email -->
+                <div class="Campo-Login">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" type="email" class="form-control" placeholder="Enter the email address you registered with!" />
+                </div>
+
+                <!-- Senha -->
+                <div class="Campo-Senha">
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Enter your registered password!" />
+                </div>
+
+
+                <!-- Botão de Login -->
+                <div class="Login-Div">
+                    <button type="submit" class="Botao-Login">Login</button>
+                    <!-- Mensagens de erro -->
+                    <div asp-validation-summary="All" class="text-danger mt-2"></div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </main>
+</body>
+</html>

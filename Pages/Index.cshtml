@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Blank1ll NetWork Forum";
+}
+
+<div class="Botoes-Registro-Login">
+    <a asp-page="/PaginasDoForum/LoginSystem">
+        <button type="button">Login</button>
+    </a>
+    <a asp-page="/PaginasDoForum/RegisterSystem">
+        <button type="button">Register</button>
+    </a>
+</div>
+<div class="Botoes-De-Navegacao">
+    <a href="https://www.youtube.com/@@erickd7s" target="_blank">
+        <img src="@Url.Content("~/imagens/Youtube.png")" alt="YouTube" width="40" height="40">
+    </a>
+    <a href="https://discord.gg/ES878mVpS2" target="_blank">
+        <img src="@Url.Content("~/imagens/discord.png")" alt="Discord" width="40" height="40">
+    </a>
+    <a href="https://www.instagram.com/rossine187/" target="_blank">
+        <img src="@Url.Content("~/imagens/Instagram.png")" alt="Instagram" width="40" height="40">
+    </a>
+</div>
+
+<main class="Conteudo-Principal">
+    <h1>Welcome to the Blank1ll Network Forum Site</h1>
+    <p>A website created with the aim of bringing together people who enjoy the area of ​​Technology, Development and games.</p>        
+</main>

@@ -1,0 +1,114 @@
+/* Fundo geral */
+body {
+    height: 100vh;
+    background-color: #0f1117; /* tom mais moderno */
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container do feed */
+.feed-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Card padrão (postagens e formulário) */
+.feed-container .card {
+    border: none;
+    background: #1a1d29;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feed-container .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
+}
+
+/* Textarea do formulário */
+.feed-container textarea {
+    background: #12141d;
+    border: 1px solid #2a2e3d;
+    color: #ffffff !important;   /* 🔥 força texto branco */
+    border-radius: 8px;
+    resize: none;
+    caret-color: #ffffff;        /* 🔥 cursor branco também */
+}
+
+.feed-container textarea::placeholder {
+    color: #888888; /* cor do placeholder (cinza claro) */
+}
+
+.feed-container textarea:focus {
+    border-color: #0dcaf0;
+    box-shadow: 0 0 5px rgba(13, 202, 240, 0.5);
+    background: #161923;
+}
+
+/* Inputs de upload */
+.feed-container input[type="file"] {
+    background: #12141d;
+    border: 1px solid #2a2e3d;
+    color: #b5b5b5;
+    border-radius: 6px;
+}
+
+.feed-container input[type="file"]::file-selector-button {
+    background: #0dcaf0;
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feed-container input[type="file"]::file-selector-button:hover {
+    background: #0bb4d4;
+}
+
+/* Botão de postar */
+.feed-container button {
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.feed-container button:hover {
+    background: #0bb4d4;
+}
+
+/* Cabeçalho do post */
+.feed-container .card .d-flex strong {
+    font-size: 1rem;
+}
+
+.feed-container .card small {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Texto do post */
+.feed-container .card p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Imagem do post */
+.feed-container img {
+    border-radius: 10px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Ações (curtir, comentar, compartilhar) */
+.feed-container .card .d-flex a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.feed-container .card .d-flex a:hover {
+    color: #0dcaf0 !important;
+}
